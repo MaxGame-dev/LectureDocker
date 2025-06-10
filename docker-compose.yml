@@ -9,6 +9,14 @@ services:
     environment:
       MYSQL_ROOT_PASSWORD: 'p@ssword'
 
+  mysql2:
+    build: ./mysql2
+    volumes:
+      - db_data2:/var/lib/mysql
+    restart: always
+    environment:
+      MYSQL_ROOT_PASSWORD: 'p@ssword'
+
   phpmyadmin:
     depends_on:
       - mysql
@@ -31,3 +39,4 @@ services:
 
 volumes:
     db_data: {}
+    db_data2: {}

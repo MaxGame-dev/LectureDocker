@@ -1,6 +1,9 @@
 CREATE USER IF NOT EXISTS 'data_user'@'localhost' IDENTIFIED BY 'data';
 GRANT ALL PRIVILEGES ON * . * TO 'data_user'@'localhost';
 
+CREATE USER IF NOT EXISTS 'data_user'@'%' IDENTIFIED BY 'data';
+GRANT ALL PRIVILEGES ON * . * TO 'data_user'@'%';
+
 DROP DATABASE IF EXISTS test_db;
 CREATE DATABASE IF NOT EXISTS test_db;
 
