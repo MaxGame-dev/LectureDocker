@@ -48,3 +48,14 @@ insert into classes (class_id, class_name) values (1, 'Programmer Class');
 insert into classes (class_id, class_name) values (2, 'Designer Class');
 
 insert into students (student_id, student_name, class_id) values (5, 'Takagi', 3);
+
+
+DROP TABLE IF EXISTS teachers;
+CREATE TABLE IF NOT EXISTS teachers (
+    teacher_id INT PRIMARY KEY,
+    teacher_name VARCHAR(255),
+    class_id INT
+);
+
+insert into teachers (teacher_id, teacher_name, class_id) values (1, 'Kato', 1);
+insert into teachers (teacher_id, teacher_name, class_id) values (2, 'Hashiguchi', 2);

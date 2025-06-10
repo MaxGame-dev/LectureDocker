@@ -6,5 +6,8 @@ RUN apt-get update \
 
 RUN apt-get install -y vim
 
+
+RUN apt-get update && apt-get install -y openssh-server
+
 COPY ./php_apache2.conf /etc/apache2/mods-enabled
 RUN apache2ctl restart
